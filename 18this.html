@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> </title>
+    </head>
+    <body>
+        <script type="text/javascript">
+         /*var foo = ()=>{console.log(this);}
+         foo();*/
+         var name = "window";
+         /*var obj = {
+             "name": "Nikita","goodTeacher":function(){
+                 console.log(this.name);
+             }
+         }*/ 
+         // this指向定义时所在的作用域，不是执行时的定义域
+         /* var obj = {
+              "name":"Nikita",
+              "goodTeacher":()=>{
+                  console.log(this.name);
+              }
+          }*/
+          /*var obj = {};
+          obj.name = "Nikita";
+          obj.goodTeacher = ()=>{
+              console.log(this.name);
+          }
+          obj.goodTeacher();*/
+          /*var obj = {
+              "name" : "Nikita",
+              "goodTeacher":function(){
+                  console.log(this);
+                  setTimeout(()=>{console.log(this.name)},1000);
+                }
+          }*/
+        var obj = {
+            "name":"Nikita",
+            "goodTeacher":()=>{
+                console.log(this);
+                setTimeout(()=>{console.log(this.name)},1000);
+            }
+        }
+          obj.goodTeacher();
+        </script>
+</body>
+</html>  
