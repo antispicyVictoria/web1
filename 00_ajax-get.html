@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style>
+        </style>
+    </head>
+        <body>
+<h1></h1>
+<script>
+var xhr = new XMLHttpRequest();
+ //1.创建ajax对象
+ xhr.onreadystatechange = function(){
+                     //当xhr对象的readyState属性发生了改变，这个事件就会触发
+                     //readyState:
+                     //xhr对象已经创建，但是还没有进行初始化操作
+                     //xhr对象已经调用了open
+                     //xhr已经发送了ajax请求
+                     //已经返回了部分数据
+                     //数据以及全部返回
+                     if (xhr.readyState !==4){
+                         return;                
+                     }
+                     if(xhr.status>=200&& xhr.status<=300){
+                       document.querySelector('h1').innerHtML = xhr.responseText;
+                       //数据线在了xhr.responseText的属性中（String）
+                     }
+                     else{
+                    console.error('请求失败');
+                     }
+ }
+ xhr.open('get','./test.txt',true)
+ //打开这个对象
+ xhr.send();
+                   
+</script>
+        </body>
+</html>)
