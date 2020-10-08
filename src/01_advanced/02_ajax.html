@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="../vendor/jquery-3.5.1.min.js"></script>
+    <script>
+        $.ajax({
+            type:'get',
+            url:'./person.json',
+            data:{
+                name:'egor'
+            },
+            success:function(resp){
+                alert(resp.hobby);
+            },
+            error:function(){
+
+            }
+        })
+  /*       $ajax({
+            type:'get',
+            url:'./person.json'
+        }).done(function(){
+
+        }).fail(function(){
+
+        }) */
+        $ajax({type:'get',url:'./api1'}).done(function(){
+            return $.ajax({url:'./api2'})
+        }).done(function(){
+            return $.ajax({url:'api3'})
+        }).done(function(){
+            console.log('调用结束')
+        })
+    </script>
+</body>
+</html>

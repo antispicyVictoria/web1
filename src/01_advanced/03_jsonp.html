@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="../vendor/jquery-3.5.1.min.js">
+    </script>
+    <script>
+   $.ajax({
+       typr:'get',
+       url:'https://.................',
+       dataType:'jsonp',
+       jsonp:'cb',
+       data:{wd:'json'}
+   }).done(function(resp){
+       alert(resp.s);
+   })//热搜关键词
+    </script>
+
+</body>
+</html>

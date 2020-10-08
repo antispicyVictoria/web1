@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <!--  <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+    </ul>
+    <script src="../vendor/jquery-3.5.1.min.js"></script>
+    <script>
+        $('li').on('mouseover',function(){
+            $(this).css('background','yellow');
+        }).on('mouseout',function(){
+            $(this).css('background','pink');
+        })
+    </script> -->
+    <!-- <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+    </ul>
+    <script src="../vendor/jquery-3.5.1.min.js"></script>
+    <script>
+        $('li').on('mouseover',function(){
+            $(this).css('background','yellow');
+        }).on('mouseout',function(){
+            $(this).css('background','pink');
+        })
+        //off: 1.event type
+        //2.callback name
+        $('li:eq(3)').off('mouseover');
+
+
+        $('<li>newLi</li>').appendTo('ul');//newLi -->
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+        </ul>
+        <script src="../vendor/jquery-3.5.1.min.js"></script>
+        <script>
+      $('ul').on('mouseover','li:even',function(){
+          $(this).css('background','pink');
+      }).on('mouseout','li:even',function(){
+          $(this).css('background','yellow');
+      })
+      $('<li>newLi</li>').appendTo('ul');
+
+
+
+
+
+        </script>
+    </script>
+</body>
+</html>

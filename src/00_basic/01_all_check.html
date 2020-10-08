@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        th,td{
+            width:50px;
+            height:30px;
+            background: pink;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th><input type="checkbox"></th>
+                <th>name</th>
+                <th>age</th>
+                <th>major</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th><input type="checkbox"></th>
+                <th>nikita</th>
+                <th>23</th>
+                <th>programming</th>
+            </tr>
+            <tr>
+                <th><input type="checkbox"></th>
+                <th>sasha</th>
+                <th>21</th>
+                <th>literature</th>
+            </tr>
+            <tr>
+                <th><input type="checkbox"></th>
+                <th>egor</th>
+                <th>19</th>
+                <th>machine automation</th>
+            </tr> 
+        </tbody>
+    </table>
+    <script src="../vendor/jquery-3.5.1.js"></script>
+    <script>
+        $('thead input').change(function(){
+            var isChecked = $(this).prop('checked');
+            $('tbody input').prop('checked',isChecked);
+        })
+        $('tbody input').change(function(){
+            var allCount = $('tbody input').length;
+            var checkCount = $('tbody input:checked').length;
+            var isAllChecked = allCount === checkCount;
+            $('thead input').prop('checked',isAllChecked);
+        })
+         
+    </script>
+    
+</body>
+</html>

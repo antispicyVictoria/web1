@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>first Blood</button>
+    <button>double kill</button>
+    <script src="Message.js"></script>
+    <script src="Hero.js"></script>
+    <script>
+        var msg = new Message();
+         var ni = new Hero('nikita',msg);
+         var sa = new Hero('sasha',msg);
+         var eg = new Hero('egor',msg);
+         var vi = new Hero('victoria',msg);
+         msg.attach(ni);
+         msg.attach(sa);
+         msg.attach(eg);
+         msg.attach(vi);
+         document.querySelector('button:first-of-type').onclick = function(){
+             msg.setState('first blood');
+         }
+         document.querySelector('button:last-of-type').onclick = function(){
+             msg.setState('double kill');
+         }
+
+    </script>
+</body>
+</html>

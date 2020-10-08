@@ -1,0 +1,40 @@
+
+
+.magnifier .left{
+    width:240px;
+    height:150px;
+    float:left;
+}
+.magnifier .left img{
+    width: 240px;
+    height:150px;
+}
+.magnifier .left  .mask{
+    width:100px;
+    height:100px;
+    position: absolute;
+    left:0;
+    top:0;
+    background-color: black;
+    opacity:0;
+}  
+
+.magnifier .float{
+    height:50px;
+    width:50px;
+    background: hotpink;
+    opacity:0.5;
+    position:absolute;
+    left:0;
+    top:0;
+    display:none ;
+}
+
+.magnifier .right{
+    height:200px;
+    width:200px;
+    background-image: url('./img/big.jpg');
+    float:left;
+    margin-left :50px;
+    display: none;
+}
